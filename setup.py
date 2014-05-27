@@ -1,4 +1,4 @@
-from xstatic.pkg import d3 as xs
+from xstatic.pkg import jasmine as xs
 
 # The README.txt file should be written in reST so that PyPI can use
 # it to generate your project's PyPI page. 
