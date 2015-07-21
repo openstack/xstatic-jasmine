@@ -3,7 +3,10 @@
 *.sqlite3
 .DS_STORE
 *.egg-info
+.eggs
 .venv
 .tox
 build
 dist
+AUTHORS
+ChangeLog
