@@ -1,28 +1,26 @@
-# Copyright (c) 2013 Hewlett-Packard Development Company, L.P.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-# implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+from xstatic.pkg import jasmine as xs
 
-import setuptools
+# The README.txt file should be written in reST so that PyPI can use
+# it to generate your project's PyPI page.
+long_description = open('README.txt').read()
 
-# In python < 2.7.4, a lazy loading of package `pbr` will break
-# setuptools if some other modules registered functions in `atexit`.
-# solution from: http://bugs.python.org/issue15881#msg170215
-try:
-    import multiprocessing  # noqa
-except ImportError:
-    pass
+from setuptools import setup, find_packages
 
-setuptools.setup(
-    setup_requires=['pbr>=1.3'],
-    pbr=True)
+setup(
+    name=xs.PACKAGE_NAME,
+    version=xs.PACKAGE_VERSION,
+    description=xs.DESCRIPTION,
+    long_description=long_description,
+    classifiers=xs.CLASSIFIERS,
+    keywords=xs.KEYWORDS,
+    maintainer=xs.MAINTAINER,
+    maintainer_email=xs.MAINTAINER_EMAIL,
+    license=xs.LICENSE,
+    url=xs.HOMEPAGE,
+    platforms=xs.PLATFORMS,
+    packages=find_packages(),
+    namespace_packages=['xstatic', 'xstatic.pkg', ],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[],
+)
