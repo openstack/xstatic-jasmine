@@ -1,10 +1,9 @@
+from setuptools import setup, find_packages
 from xstatic.pkg import jasmine as xs
 
 # The README.txt file should be written in reST so that PyPI can use
 # it to generate your project's PyPI page.
 long_description = open('README.txt').read()
-
-from setuptools import setup, find_packages
 
 setup(
     name=xs.PACKAGE_NAME,
@@ -19,7 +18,7 @@ setup(
     url=xs.HOMEPAGE,
     platforms=xs.PLATFORMS,
     packages=find_packages(),
-    namespace_packages=['xstatic', 'xstatic.pkg', ],
+    namespace_packages=['xstatic', 'xstatic.pkg'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[],
