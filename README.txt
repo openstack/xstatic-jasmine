@@ -1,5 +1,5 @@
 XStatic-Jasmine
---------------
+---------------
 
 Jasmine JavaScript library packaged for setuptools (easy_install) / pip.
 
